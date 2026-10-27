@@ -231,7 +231,7 @@ export const CaptchaChallenge = forwardRef<CaptchaChallengeHandle, CaptchaChalle
       onError,
       provider = env.VITE_HCAPTCHA_SITE_KEY || !env.VITE_TURNSTILE_SITE_KEY ? 'hcaptcha' : 'turnstile',
       siteKey = provider === 'hcaptcha'
-        ? (env.VITE_HCAPTCHA_SITE_KEY || 'bbd4605c-e28a-485a-b6a8-02c0edf031a0')
+        ? (env.VITE_HCAPTCHA_SITE_KEY || '10000000-ffff-ffff-ffff-000000000001')
         : (env.VITE_TURNSTILE_SITE_KEY || '1x00000000000000000000AA'),
       action = 'auth',
       theme = 'light',
@@ -315,7 +315,7 @@ export const CaptchaChallenge = forwardRef<CaptchaChallengeHandle, CaptchaChalle
       const effectiveSiteKey =
         siteKey ||
         (provider === 'hcaptcha'
-          ? 'bbd4605c-e28a-485a-b6a8-02c0edf031a0'
+          ? '10000000-ffff-ffff-ffff-000000000001'
           : env.IS_DEV
           ? '1x00000000000000000000AA'
           : '');

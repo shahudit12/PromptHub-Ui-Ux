@@ -24,11 +24,11 @@ import Intercom, {
 } from '@intercom/messenger-js-sdk';
 import type { User } from '../db/schema';
 
-// App ID fallback to the official PromptHub Intercom Workspace ID
+// App ID fallback for local UI development
 export const INTERCOM_APP_ID =
   ((typeof import.meta !== 'undefined' && (import.meta as any)?.env?.VITE_INTERCOM_APP_ID) as string) ||
   ((globalThis as any)?.process?.env?.VITE_INTERCOM_APP_ID as string) ||
-  'ypr5n0bt';
+  'mock_intercom_app';
 
 let isBooted = false;
 let currentIdentifiedUserId: string | null = null;
