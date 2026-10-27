@@ -1,0 +1,623 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <!-- Security meta tags -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Primary SEO -->
+    <title>PromptHub.cloud — The AI Prompt Engineering &amp; Model Studio</title>
+    <meta name="description" content="PromptHub.cloud is the premier AI Prompt Engineering Studio. Version-control, test against live LLMs (Gemini, Claude, GPT-4o, DeepSeek), analyze quality scores, and collaborate on production prompts.">
+    <meta name="keywords" content="PromptHub, PromptHub.cloud, AI prompts, prompt engineering, prompt IDE, LLM testing, AI workflows, prompt management, system prompts, prompt version control">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="PromptHub.cloud">
+    <meta name="theme-color" content="#F0EDCE" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    <meta name="baidu-site-verification" content="codeva-prompthub">
+
+    <!-- Canonical & AI Agent Discovery -->
+    <link rel="canonical" href="https://prompthub.cloud/">
+    <link rel="alternate" type="text/markdown" title="LLM System Context" href="/llms.txt">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://prompthub.cloud/">
+    <meta property="og:title" content="PromptHub.cloud — The AI Prompt Engineering Studio">
+    <meta property="og:description" content="Version-control, test against real AI models, score quality, and share production-grade prompts.">
+    <meta property="og:site_name" content="PromptHub.cloud">
+    <meta property="og:image" content="https://prompthub.cloud/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://prompthub.cloud/">
+    <meta name="twitter:title" content="PromptHub.cloud — AI Prompt Engineering Studio">
+    <meta name="twitter:description" content="Stop losing prompts in chat history. PromptHub.cloud provides version control, live multi-model benchmarking, quality scoring, and community discovery.">
+    <meta name="twitter:image" content="https://prompthub.cloud/logo.png">
+
+    <!-- Structured Data / JSON-LD (SEO + AEO + GEO Entity Graph) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://prompthub.cloud/#organization",
+          "name": "PromptHub",
+          "url": "https://prompthub.cloud",
+          "logo": "https://prompthub.cloud/logo.png",
+          "description": "Developer platform and studio for AI prompt engineering, multi-model benchmarking, and prompt collaboration."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://prompthub.cloud/#website",
+          "url": "https://prompthub.cloud",
+          "name": "PromptHub.cloud",
+          "publisher": { "@id": "https://prompthub.cloud/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://prompthub.cloud/marketplace?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://prompthub.cloud/#software",
+          "name": "PromptHub Studio",
+          "url": "https://prompthub.cloud",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "All",
+          "description": "Premier AI Prompt Engineering Studio. Version-control, test against live LLMs, analyze quality scores, and collaborate on production prompts.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "featureList": [
+            "Interactive Prompt Engineering Studio & IDE",
+            "Multi-Model Shootout & Arena Benchmarking",
+            "Deterministic Prompt Quality & Security Analysis",
+            "Real-time Token Counting and Cost Tracking",
+            "Free & Paid AI Model Execution via OpenRouter and BYOK"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://prompthub.cloud/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is PromptHub?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "PromptHub (https://prompthub.cloud) is an AI prompt engineering studio and multi-model developer platform. It allows prompt engineers and creators to version-control, analyze, optimize, benchmark, and test production prompts across 400+ frontier and open-weights models."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use my own API keys (BYOK) on PromptHub?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. PromptHub provides client-side encrypted Bring Your Own Key (BYOK) support for OpenAI, Anthropic Claude, Google Gemini, Groq, Mistral, DeepSeek, and OpenRouter. Your credentials remain exclusively in your browser session memory and are never persisted on PromptHub servers."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Is PromptHub free to use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. PromptHub offers a generous free tier featuring access to high-efficiency free models via OpenRouter (including Llama, Gemma, Qwen, and Nemotron), full Prompt Studio IDE capabilities, quality scoring, and community discovery."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the Multi-Model Arena work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The Multi-Model Arena executes your prompt simultaneously across 2 to 4 eligible models, comparing token usage, latency, and response quality side-by-side to find the most cost-effective model for your production workload."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I generate interactive web apps and portfolios on PromptHub?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. PromptHub features an autonomous AI Workspace that lets you describe an application idea in natural language, select visual and architecture directions, and preview, refine, and export live interactive code."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+
+    <!-- App Manifest & Apple Touch Icon -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="apple-touch-icon" href="/icons/pwa-192x192.png">
+
+    <!-- Non-render-blocking Google Fonts (Preload + media swap) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    >
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      media="print"
+      onload="this.media='all'"
+    >
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+      >
+    </noscript>
+    <!-- Zero-Flicker Early Theme Script -->
+    <script>
+      (function() {
+        try {
+          var queryTheme = new URLSearchParams(window.location.search).get('theme');
+          var stored = localStorage.getItem('prompthub-theme');
+          var legacy = localStorage.getItem('prompthub-appearance-mode');
+          var resolved = 'light';
+          if (queryTheme === 'dark' || queryTheme === 'light') {
+            resolved = queryTheme;
+          } else if (stored === 'dark' || stored === 'dark-glass' || stored === 'dark-solid' || legacy === 'dark' || legacy === 'dark-glass' || legacy === 'dark-solid') {
+            resolved = 'dark';
+          } else if (stored === 'light' || legacy === 'light') {
+            resolved = 'light';
+          }
+          // Persist canonical migration
+          try {
+            localStorage.setItem('prompthub-theme', resolved);
+            if (legacy) localStorage.removeItem('prompthub-appearance-mode');
+          } catch (_) {}
+
+          var isDark = resolved === 'dark';
+          var root = document.documentElement;
+          root.setAttribute('data-theme', resolved);
+          if (isDark) {
+            root.classList.add('dark');
+            root.style.colorScheme = 'dark';
+          } else {
+            root.classList.remove('dark');
+            root.style.colorScheme = 'light';
+          }
+          var metaThemeColors = document.querySelectorAll('meta[name="theme-color"]');
+          var targetColor = isDark ? '#000000' : '#F0EDCE';
+          metaThemeColors.forEach(function(meta) {
+            meta.setAttribute('content', targetColor);
+          });
+        } catch (e) {}
+      })();
+    </script>
+
+    <style>
+      /* Critical inline styles — prevent flash before CSS loads */
+      html, body {
+        background-color: #F0EDCE;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      }
+
+      html.dark, html.dark body {
+        background-color: #000000;
+        color: #FFFFFF;
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px; height: 1px;
+        padding: 0; margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+      .sr-only:focus {
+        position: fixed;
+        top: 1rem; left: 1rem;
+        z-index: 9999;
+        width: auto; height: auto;
+        padding: 0.5rem 1rem;
+        background: #384959;
+        color: #F8FBFE;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 700;
+        clip: auto;
+        white-space: normal;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        text-decoration: none;
+      }
+      html.dark .sr-only:focus {
+        background: #F4F8FC;
+        color: #1F2A34;
+      }
+
+      /* ═══════════════════════════════════════════════════════════════
+         PromptHub Boot Splash — Blue & Navy Developer Studio
+         Arc spinner orb · Typewriter terminal · Progress dots
+         ═══════════════════════════════════════════════════════════════ */
+
+      /* ── Base loader container ────────────────────────────────── */
+      .initial-loader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #F8FBFE;
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 1000;
+        overflow: hidden;
+        user-select: none;
+        transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.4s;
+      }
+
+      html.dark .initial-loader {
+        background-color: #1F2A34;
+      }
+
+      .initial-loader.loaded {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      /* ── Ambient radial background glow ─────────────────────── */
+      .boot-glow-bg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 480px;
+        height: 480px;
+        background: radial-gradient(ellipse at center, rgba(106, 137, 167, 0.12) 0%, transparent 68%);
+        border-radius: 50%;
+        pointer-events: none;
+        animation: boot-glow-pulse 2.8s ease-in-out infinite;
+      }
+
+      html.dark .boot-glow-bg {
+        background: radial-gradient(ellipse at center, rgba(136, 189, 242, 0.15) 0%, transparent 68%);
+      }
+
+      @keyframes boot-glow-pulse {
+        0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+        50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.08); }
+      }
+
+      /* ── Logo orb with SVG arc spinner ──────────────────────── */
+      .boot-logo-ring {
+        position: relative;
+        width: 96px;
+        height: 96px;
+        margin-bottom: 2rem;
+        animation: boot-entrance 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      @keyframes boot-entrance {
+        from { opacity: 0; transform: scale(0.82) translateY(10px); }
+        to   { opacity: 1; transform: scale(1) translateY(0); }
+      }
+
+      .boot-ring-svg {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        transform-origin: center;
+        animation: boot-ring-rotate 1.4s linear infinite;
+      }
+
+      @keyframes boot-ring-rotate {
+        from { transform: rotate(-90deg); }
+        to   { transform: rotate(270deg); }
+      }
+
+      .boot-ring-track {
+        fill: none;
+        stroke: #D7E5F1;
+        stroke-width: 2.5;
+      }
+
+      html.dark .boot-ring-track { stroke: #334657; }
+
+      .boot-ring-arc {
+        fill: none;
+        stroke: #6A89A7;
+        stroke-width: 2.5;
+        stroke-linecap: round;
+        stroke-dasharray: 55 200;
+        animation: boot-arc-shimmer 1.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+
+      html.dark .boot-ring-arc { stroke: #88BDF2; }
+
+      @keyframes boot-arc-shimmer {
+        0%   { stroke-dasharray: 10 245; stroke-dashoffset: 0; }
+        50%  { stroke-dasharray: 120 135; }
+        100% { stroke-dasharray: 10 245; stroke-dashoffset: -255; }
+      }
+
+      .boot-logo-img {
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+        width: 54px;
+        height: 54px;
+        object-fit: contain;
+        border-radius: 14px;
+      }
+
+      .boot-logo-dark { display: none; }
+      .boot-logo-light { display: block; }
+      html.dark .boot-logo-dark { display: block; }
+      html.dark .boot-logo-light { display: none; }
+
+      /* ── Wordmark ────────────────────────────────────────────── */
+      .boot-wordmark {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.25rem;
+        margin-bottom: 2rem;
+        animation: boot-fade-up 0.5s 0.18s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      @keyframes boot-fade-up {
+        from { opacity: 0; transform: translateY(8px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .boot-wordmark-title {
+        font-family: 'Outfit', 'Inter', -apple-system, sans-serif;
+        font-size: 1.75rem;
+        font-weight: 800;
+        color: #384959;
+        letter-spacing: -0.03em;
+        line-height: 1;
+      }
+
+      html.dark .boot-wordmark-title { color: #F4F8FC; }
+
+      .boot-wordmark-title span { color: #6A89A7; }
+      html.dark .boot-wordmark-title span { color: #88BDF2; }
+
+      .boot-wordmark-sub {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 0.6rem;
+        font-weight: 500;
+        color: #718498;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      html.dark .boot-wordmark-sub { color: #9FB2C3; }
+
+      /* ── Typewriter prompt terminal ──────────────────────────── */
+      .boot-typewriter-wrap {
+        display: flex;
+        align-items: center;
+        padding: 0.45rem 0.85rem;
+        background: #FFFFFF;
+        border: 1px solid #D7E5F1;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(56, 73, 89, 0.06), inset 0 1px 0 rgba(255,255,255,0.8);
+        min-width: 230px;
+        max-width: 280px;
+        animation: boot-fade-up 0.5s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      html.dark .boot-typewriter-wrap {
+        background: #263643;
+        border-color: #42586B;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .boot-prompt-prefix {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 0.72rem;
+        font-weight: 600;
+        color: #6A89A7;
+        margin-right: 0.4rem;
+        flex-shrink: 0;
+      }
+
+      html.dark .boot-prompt-prefix { color: #88BDF2; }
+
+      .boot-typewriter-text {
+        font-family: 'JetBrains Mono', 'Courier New', monospace;
+        font-size: 0.72rem;
+        color: #536779;
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      html.dark .boot-typewriter-text { color: #D4E0EA; }
+
+      .boot-cursor {
+        display: inline-block;
+        width: 1.5px;
+        height: 0.85em;
+        background: #6A89A7;
+        margin-left: 2px;
+        vertical-align: middle;
+        flex-shrink: 0;
+        animation: boot-cursor-blink 0.9s step-end infinite;
+      }
+
+      html.dark .boot-cursor { background: #88BDF2; }
+
+      @keyframes boot-cursor-blink {
+        0%, 100% { opacity: 1; }
+        50%       { opacity: 0; }
+      }
+
+      /* ── Progress dots ───────────────────────────────────────── */
+      .boot-dots {
+        display: flex;
+        gap: 0.35rem;
+        margin-top: 2.5rem;
+        animation: boot-fade-up 0.5s 0.45s cubic-bezier(0.16, 1, 0.3, 1) both;
+      }
+
+      .boot-dot {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: #D7E5F1;
+        transition: background 0.25s ease;
+      }
+
+      html.dark .boot-dot { background: #334657; }
+
+      .boot-dot.active {
+        background: #6A89A7;
+        animation: boot-dot-pop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      html.dark .boot-dot.active { background: #88BDF2; }
+
+      @keyframes boot-dot-pop {
+        from { transform: scale(0.7); }
+        to   { transform: scale(1.45); }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .initial-loader { display: none !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content for keyboard accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
+    <div id="root">
+      <!-- PromptHub branded boot splash — renders before React hydrates -->
+      <div class="initial-loader" id="initial-loader" aria-label="Loading PromptHub Studio" role="status">
+
+        <!-- Ambient radial glow -->
+        <div class="boot-glow-bg" aria-hidden="true"></div>
+
+        <!-- Logo ring + SVG arc spinner -->
+        <div class="boot-logo-ring" aria-hidden="true">
+          <svg class="boot-ring-svg" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="boot-ring-track" cx="48" cy="48" r="44"/>
+            <circle class="boot-ring-arc" cx="48" cy="48" r="44"/>
+          </svg>
+          <img class="boot-logo-img boot-logo-dark" src="/branding/prompthub-icon-dark.png" width="54" height="54" alt="PromptHub">
+          <img class="boot-logo-img boot-logo-light" src="/branding/prompthub-icon-light.png" width="54" height="54" alt="PromptHub">
+        </div>
+
+        <!-- Wordmark -->
+        <div class="boot-wordmark">
+          <div class="boot-wordmark-title">Prompt<span>Hub</span></div>
+          <div class="boot-wordmark-sub">AI WORKSPACE FOR WHAT'S NEXT</div>
+        </div>
+
+        <!-- Typewriter terminal prompt line -->
+        <div class="boot-typewriter-wrap" aria-hidden="true">
+          <span class="boot-prompt-prefix">›</span>
+          <span class="boot-typewriter-text" id="boot-tw-text"></span>
+          <span class="boot-cursor"></span>
+        </div>
+
+        <!-- Progress dots -->
+        <div class="boot-dots" aria-hidden="true">
+          <div class="boot-dot" id="bd-1"></div>
+          <div class="boot-dot" id="bd-2"></div>
+          <div class="boot-dot" id="bd-3"></div>
+          <div class="boot-dot" id="bd-4"></div>
+          <div class="boot-dot" id="bd-5"></div>
+        </div>
+
+        <script>
+          (function() {
+            try {
+              var isReturning = localStorage.getItem('ph_booted') === 'true' || localStorage.getItem('prompthub-demo-seen') === 'true';
+              var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+              var loader = document.getElementById('initial-loader');
+              if (!loader) return;
+
+              if (isReturning || reduced) {
+                loader.style.display = 'none';
+                return;
+              }
+
+              var messages = [
+                'Initializing studio...',
+                'Loading model catalog...',
+                'Preparing analyzer...',
+                'Warming up arena...',
+                'Ready to engineer.'
+              ];
+              var dots = ['bd-1','bd-2','bd-3','bd-4','bd-5'];
+              var twEl = document.getElementById('boot-tw-text');
+              var currentDot = 0;
+
+              function typeMessage(msg, cb) {
+                if (!twEl) { if (cb) cb(); return; }
+                twEl.textContent = '';
+                var i = 0;
+                function tick() {
+                  if (i < msg.length) {
+                    twEl.textContent = msg.slice(0, ++i);
+                    setTimeout(tick, 28);
+                  } else {
+                    if (cb) setTimeout(cb, 140);
+                  }
+                }
+                tick();
+              }
+
+              function advanceDot() {
+                if (currentDot > 0) {
+                  var prev = document.getElementById(dots[currentDot - 1]);
+                  if (prev) prev.className = 'boot-dot';
+                }
+                var el = document.getElementById(dots[currentDot]);
+                if (el) el.className = 'boot-dot active';
+
+                typeMessage(messages[currentDot], function() {
+                  currentDot++;
+                  if (currentDot < dots.length) {
+                    setTimeout(advanceDot, 80);
+                  } else {
+                    localStorage.setItem('ph_booted', 'true');
+                    loader.classList.add('loaded');
+                    setTimeout(function() {
+                      if (loader && loader.parentNode) loader.parentNode.removeChild(loader);
+                    }, 420);
+                  }
+                });
+              }
+
+              setTimeout(advanceDot, 320);
+            } catch(e) {}
+          })();
+        </script>
+      </div>
+    </div>
+
+    <!-- Intercom Messenger Widget Loader -->
+    <script>
+      (function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');if(w.intercomSettings){ic('update',w.intercomSettings);}}else{var d=document;var i=function(){i.c(arguments);};i.q=[];i.c=function(args){i.q.push(args);};w.Intercom=i;var l=function(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/ypr5n0bt';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);};if(document.readyState==='complete'){l();}else if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})();
+    </script>
+
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

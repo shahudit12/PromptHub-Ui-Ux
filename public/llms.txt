@@ -1,0 +1,29 @@
+# PromptHub.cloud
+
+> The premier AI Prompt Engineering & Model Studio. Write, analyze, optimize, benchmark, and collaborate on production-grade AI prompts across 400+ frontier and open-weights models.
+
+## Core Capabilities
+- **Prompt Studio IDE**: Multi-model workspace with dynamic variable detection (`{{variable}}`), inline test runner, 11-format code export (LangChain, LlamaIndex, Python, TypeScript, cURL), and version history snapshots.
+- **Prompt Analyzer**: 4-dimension audit scoring (Clarity, Specificity, Robustness, Safety) with automated heuristic vulnerability detection and token efficiency recommendations.
+- **Prompt Optimizer**: AI-assisted single-click prompt enhancement and variant generation.
+- **Multi-Model Arena**: Side-by-side prompt benchmarking and latency/token comparison across multiple LLM providers.
+- **Marketplace & Community**: Community prompt discovery, verified creator revenue share, forkable prompt templates, and community reviews.
+- **Autonomous AI Agents Studio**: 15 domain-specialized agents with tool augmentation (Web search, calculator, storage vault, code interpreter).
+- **Team Workspaces**: Organization-level prompt management, RBAC member roles, shared libraries, and private vaults.
+
+## Model Access Architecture
+- **Free Tier Models**: High-efficiency free models provided through OpenRouter gateway (`liquid/lfm-2.5-2.6b:free`, `qwen/qwen3.8-27b:free`, `google/gemma-4-31b-it:free`, `nvidia/nemotron-3-super-120b-a12b:free`, `cohere/north-mini-code:free`).
+- **Paid / Frontier Models**: Premium inference provided through AICredits with unified INR/credit wallet economics.
+- **BYOK (Bring Your Own Key)**: Direct client-side encrypted credentials for 12 providers (OpenAI, Anthropic, Google Gemini, Groq, Mistral, DeepSeek, xAI, OpenRouter, etc.). Zero server-side storage of BYOK keys.
+
+## Canonical URLs
+- Homepage: https://prompthub.cloud/
+- AI Workspace: https://prompthub.cloud/workspace
+- Prompt Library: https://prompthub.cloud/library
+- Collections & Templates: https://prompthub.cloud/collections
+- Marketplace: https://prompthub.cloud/marketplace
+- Community: https://prompthub.cloud/community
+- Models Directory: https://prompthub.cloud/models-guide
+- BYOK API Credentials: https://prompthub.cloud/credentials
+- Pricing & Credits: https://prompthub.cloud/pricing
+- Full LLM Specification: https://prompthub.cloud/llms-full.txt

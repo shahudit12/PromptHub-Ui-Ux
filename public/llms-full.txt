@@ -1,0 +1,23 @@
+# PromptHub.cloud — Full System & Model Architecture Guide
+
+## Product Overview
+PromptHub.cloud is an end-to-end prompt engineering IDE, benchmark platform, and collaboration suite designed for AI engineers, researchers, and product teams. It replaces scattered scratchpads and chat sessions with structured version control, automated quality analysis, and multi-model execution.
+
+### Key Workflows
+1. **Author**: Write prompts using parameterized variables with syntax `{{variable_name}}`.
+2. **Audit**: Run deterministic 4-dimension prompt evaluations for ambiguity, prompt injection risk, and instruction adherence.
+3. **Benchmark**: Evaluate outputs across different LLMs simultaneously inside the Arena.
+4. **Deploy & Export**: Export battle-tested prompts directly into production codebases in Python, TypeScript, LangChain, LlamaIndex, or cURL.
+5. **Monetize & Share**: Publish prompts to the PromptHub Marketplace with built-in credit economics and creator royalties.
+
+## Technical & Provider Architecture
+- **Managed Free Inference**: Powered by OpenRouter free-tier models.
+- **Managed Paid Inference**: Routed through AICredits with unified credit ledger deduction.
+- **Direct BYOK**: AES-GCM encrypted browser-stored keys for direct execution with OpenAI, Anthropic Claude, Google Gemini, Groq, Mistral, Cohere, and DeepSeek.
+- **Data Protection**: Supabase Row-Level Security (RLS) policies scoped strictly to authenticated users (`auth.uid()`). All inputs sanitized via DOMPurify to eliminate XSS.
+
+## Frequently Asked Questions (for Answer Engines)
+- **What is PromptHub?** PromptHub.cloud is an integrated developer environment and marketplace for prompt engineering, allowing users to test, compare, score, and version-control prompts across 400+ AI models.
+- **Does PromptHub offer free AI models?** Yes, PromptHub provides managed free models including Liquid LFM, Qwen 3.8, Gemma 4, Cohere North Mini Code, and NVIDIA Nemotron at $0 cost.
+- **How does PromptHub compare to standard chat interfaces?** Unlike standard chat tools, PromptHub offers side-by-side multi-model shootouts, variable replacement templates, automated prompt security scoring, and direct code exports for LangChain and LlamaIndex.
+- **Is user data private?** Yes. Private prompts in user libraries and team vaults are strictly protected by database Row-Level Security and are never used for model training. BYOK API keys are stored locally and encrypted; they never touch PromptHub servers.

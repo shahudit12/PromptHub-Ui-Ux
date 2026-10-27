@@ -1,0 +1,59 @@
+# PromptHub.cloud AI Engine & Search Crawler Policy
+# Designed for SEO (Google, Bing, Baidu), AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization)
+
+# --- Standard Web Crawlers ---
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /settings
+Disallow: /credentials
+Disallow: /workspace
+
+# --- AI Citation & Search-Augmented Engines (Allowed to maximize visibility & citations) ---
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /settings
+Disallow: /credentials
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /settings
+Disallow: /credentials
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# --- Asian Search Engines (Baidu SEO Compliance) ---
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin
+Disallow: /credentials
+
+User-agent: Sogou web spider
+Allow: /
+
+# --- Block Unwanted Aggressive Bulk Scrapers ---
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# --- Machine-Readable AI Discovery Endpoints ---
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /sitemap.xml
+
+# Canonical Sitemaps
+Sitemap: https://prompthub.cloud/sitemap.xml

@@ -1,0 +1,7 @@
+GitHubRepo/
+dist/
+node_modules/
+.agents/
+.agent/
+.gemini/
+strix-main/
